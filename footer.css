@@ -1,0 +1,26 @@
+#creator {
+    text-align: center;
+    background: white;
+    padding: 25px 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+
+div.contanct-container {
+    margin: auto;
+    position: relative;
+}
+
+.contanct-container {
+    position: relative;
+  }
+  
+  div.contanct-container row {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }

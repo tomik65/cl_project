@@ -1,0 +1,122 @@
+.loan-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 0 20px 40px rgba(0,0,0,.11); */
+  justify-content: space-around;
+
+  .loan-form {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    width: 100%;
+    /* max-width: 700px; */
+    justify-content: space-between;
+    height: 400px;
+    /* border-radius: 15px; */
+    /* margin-bottom: 50px; */
+    box-shadow: 0 20px 40px 5px rgba(0,0,0,.08);
+    padding: 20px 80px 30px 80px;
+    z-index: 10000;
+    flex-wrap: wrap;
+
+    h1{
+      width: 100%;
+    }
+
+    .form-slider {
+      align-self: stretch;
+      width: 100%;
+    }
+
+    .coupon-area {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      width: 40%;
+      text-transform: uppercase;
+
+    }
+
+    button[type="submit"] {
+      text-transform: uppercase;
+    }
+  }
+
+  .calculator {
+    text-transform: uppercase;
+    white-space: revert;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 5px;
+    text-align: center;
+    padding: 30px 50px 30px 50px;
+    background-color: #096a2e;
+    /* border-radius: 0px 0px 10px 10px; */
+    border: 1px solid #dfdfdf26;
+    font-weight: 400;
+    font-size: 20px;
+    /* box-shadow: 0px 3px 15px 1px rgba(0,0,0,.11); */
+    color: white;
+    background: linear-gradient(180deg, #27ae60 0%, #096a2e 100%);
+    font-weight: 400;
+    letter-spacing: 0.8px;
+  
+    .value {
+      text-align: right;
+    }
+    .name{
+      text-align: left;
+    }
+    .summary{
+      font-weight: 700;
+    }
+  }
+  .loan-amount-input h2 {
+    margin: 0;
+
+  }
+  div.loan-form-container h3{
+    font-size: 20px;
+  }
+
+  .button-68 {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #27ae60;
+    /* border-radius: 8px; */
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  .loan-form-button {
+    width: 50%;
+  }
+
+  
+  
+}

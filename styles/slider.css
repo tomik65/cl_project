@@ -1,0 +1,176 @@
+.slider-container-inner {
+  --border-color: #000000;
+  --border-radius: 4px;
+  --background: white;
+  --bar-left: #000000;
+  --bar-right: rgb(0, 0, 0);
+  --foreground: var(--border-color);
+
+  color: var(--foreground);
+  background-color: var(--background);
+
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 10px;
+
+  .track {
+    flex-grow: 1;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: center;
+    position: relative;
+
+    --bar-height: 20px;
+    --bar-border-radius: calc(var(--bar-height) / 2);
+
+    .bar-left {
+      height: var(--bar-height);
+      background-color: var(--bar-left);
+      border-top-left-radius: var(--bar-border-radius);
+      border-bottom-left-radius: var(--bar-border-radius);
+      background-color: #27ae60;
+    }
+
+    .bar-right {
+      flex-grow: 1;
+      height: var(--bar-height);
+      background-color: var(--bar-right);
+      border-top-right-radius: var(--bar-border-radius);
+      border-bottom-right-radius: var(--bar-border-radius);
+      background-color: #096a2e;
+    }
+
+    .thumb {
+      position: absolute;
+      height: 35px;
+      min-width: 100px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--background);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+
+      user-select: none;
+      cursor: pointer;
+
+      padding: 30px 30px;
+      border-radius: 5px;
+      background-color: green;
+      color: #fff;
+      font-weight: 700;
+      font-size: 30px;
+
+      .popup {
+        position: absolute;
+        bottom: 55px;
+        border: 1px solid var(--border-color);
+        white-space: nowrap;
+        background: var(--background);
+        border-radius: var(--border-radius);
+        padding: 10px;
+        pointer-events: none;
+        color: #000000;
+      }
+
+      .popup::after {
+        position: absolute;
+        width: 20px;
+        /* height: 20px; */ 
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 L50,50 L100,0" fill="none" stroke="white" stroke-width="5"/></svg>');
+        background-origin: content-box;
+        background-color: var(--background);
+        background-size: 100%;
+        content: "";
+        color: #000000;
+       
+      }
+    }
+
+    .thumb::after {
+      position: absolute;
+      right: 5px;
+      width: 10px;
+      height: 10px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L90,50 L50,100" fill="none" stroke="white" stroke-width="20"/></svg>');
+      background-origin: content-box;
+      background-repeat: no-repeat;
+      content: "";
+    }
+
+    .thumb:before {
+      position: absolute;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L10,50 L50,100" fill="none" stroke="white" stroke-width="20"/></svg>');
+      background-origin: content-box;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  .step-button {
+  
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: 3px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    cursor: pointer;
+    background-color: #096a2e;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    padding: 0px 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  button.slider-container-inner {
+      appearance: none;
+      backface-visibility: hidden;
+      background-color: #27ae60;
+      border-radius: 8px;
+      border-style: none;
+      box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: 1.5;
+      outline: none;
+      overflow: hidden;
+      padding: 13px 20px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transform: translate3d(0, 0, 0);
+      transition: all .3s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: top;
+      white-space: nowrap;
+  }
+}
