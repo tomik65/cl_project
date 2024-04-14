@@ -1,21 +1,27 @@
 <footer class="footer">
-	<h1 class="kontakt-h1">KONTAKT</h1>
 
+<!--
 	<div class="contanct-container">
 		<ul class="row">
-			<li>Creditland s.r.o.</li>
-			<li>Žižkova 1696/15, 586 01 Jihlava</li>
+
 			<li>info@creditland.cz</li>
-			<li>infolinka:<a href="tel:560 000 418"> 560 000 418</a></li>
-			<li><a href="kontakt.html">Kontaktní formulář</a></li>
+			<li>infolinka: <a href="tel:560 000 418">777 555 999</a></li>
+			<li><a href="#anchor1">Chci vyřídit půjčku</a></li>
 		</ul>
 
+	 <ul class="">
+			<li>Rychlá půjčka</li>
+			<li>Dlouhodobá půjčka</li>
+			<li>Zpětný leasing</li>
+			<li>Balónová půjčka</li>
+			<li><a href="#anchor1">Chci vyřídit půjčku</a></li>
+		</ul>
+				-->
 
-		<p id=creator>Creditland s.r.o. © 2023 ‎&nbsp&nbsp|&nbsp&nbsp
-		<span style="white-space: nowrap;">Design a tvorba: 
-		<a href="http://www.tb-webdesign.cz">www.tb-webdesign.cz</a></span>
-	</div>				
+	</div>
+	<div id="contact">
+		<p id=creator>Creditland s.r.o. © 2024 ‎&nbsp&nbsp|&nbsp&nbsp
+			<span style="white-space: nowrap;">Design a tvorba:
+				www.tb-webdesign.cz</span></p>
+	</div>
 </footer>
-
-
-			

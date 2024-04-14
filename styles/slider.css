@@ -27,7 +27,7 @@
     align-items: center;
     position: relative;
 
-    --bar-height: 20px;
+    --bar-height: 12px;
     --bar-border-radius: calc(var(--bar-height) / 2);
 
     .bar-left {
@@ -35,7 +35,7 @@
       background-color: var(--bar-left);
       border-top-left-radius: var(--bar-border-radius);
       border-bottom-left-radius: var(--bar-border-radius);
-      background-color: #27ae60;
+      background-color: #096a2e;
     }
 
     .bar-right {
@@ -44,7 +44,7 @@
       background-color: var(--bar-right);
       border-top-right-radius: var(--bar-border-radius);
       border-bottom-right-radius: var(--bar-border-radius);
-      background-color: #096a2e;
+      background-color: #27ae60;
     }
 
     .thumb {
@@ -66,10 +66,12 @@
 
       padding: 30px 30px;
       border-radius: 5px;
-      background-color: green;
+      background-color: #096a2e;
       color: #fff;
       font-weight: 700;
-      font-size: 30px;
+      font-size: 25px;
+
+      
 
       .popup {
         position: absolute;
@@ -81,6 +83,7 @@
         padding: 10px;
         pointer-events: none;
         color: #000000;
+        font-size: 15px;
       }
 
       .popup::after {
@@ -100,12 +103,19 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .thumb {
+          font-size: 18px;
+          padding: 23px 10px;
+      }
+     }
+
     .thumb::after {
       position: absolute;
       right: 5px;
       width: 10px;
       height: 10px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L90,50 L50,100" fill="none" stroke="white" stroke-width="20"/></svg>');
+      /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L90,50 L50,100" fill="none" stroke="white" stroke-width="20"/></svg>'); */
       background-origin: content-box;
       background-repeat: no-repeat;
       content: "";
@@ -116,7 +126,7 @@
       left: 5px;
       width: 10px;
       height: 10px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L10,50 L50,100" fill="none" stroke="white" stroke-width="20"/></svg>');
+      /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L10,50 L50,100" fill="none" stroke="white" stroke-width="20"/></svg>'); */
       background-origin: content-box;
       background-repeat: no-repeat;
       content: "";
@@ -133,12 +143,12 @@
     cursor: pointer;
     background-color: #096a2e;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.85);
     cursor: pointer;
-    padding: 0px 15px;
+    padding: 9px 15px 13px 16px;
     font-weight: 700;
     color: #fff;
   }
@@ -173,4 +183,67 @@
       vertical-align: top;
       white-space: nowrap;
   }
+
+  
+  .slider-container-inner .track .thumb {
+    position: absolute;
+    height: 35px;
+    min-width: 100px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+  
+    user-select: none;
+    cursor: pointer;
+  
+    padding: 30px 30px;
+    border-radius: 5px;
+    background-color: #096a2e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+  
+    touch-action: pan-y;
+  }
+  
+  .slider-container-inner .track .thumb .popup {
+    position: absolute;
+    bottom: 55px;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+    background: var(--background);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    pointer-events: none;
+    color: #000000;
+    font-size: 15px;
+  }
+  
+  .slider-container-inner .track .thumb::after {
+    position: absolute;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .slider-container-inner .track .thumb::before {
+    position: absolute;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+  }
+  
 }
+
+
+
+
+
+
+

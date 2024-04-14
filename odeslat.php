@@ -25,7 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Pokračujte s odesláním emailu
         $jmeno = htmlspecialchars($_POST["jmeno"]);
         $email = htmlspecialchars($_POST["email"]);
-        $zprava = htmlspecialchars($_POST["zprava"]);
+        $tel = htmlspecialchars($_POST["tel"]);
+        $obec = htmlspecialchars($_POST["obec"]);
+        $ulice = htmlspecialchars($_POST["ulice"]);
+        $psc = htmlspecialchars($_POST["psc"]);
         $emailValue = htmlspecialchars($_POST["emailValue"]);
 
         // Emailová adresa pro odeslání
@@ -37,8 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Příprava obsahu emailu
         $obsah = "Jméno: $jmeno\n";
         $obsah .= "Email: $email\n";
-        $obsah .= "Zpráva:$zprava\n";
-        $obsah .= "Půjčka:$emailValue\n";
+        $obsah .= "Telefon: $tel\n";
+        $obsah .= "Obec: $obec\n";
+        $obsah .= "Ulice: $ulice\n";
+        $obsah .= "PSČ: $psc\n";
+        $obsah .= "Výše půjčky: $emailValue\n";
         
         
 

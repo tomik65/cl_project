@@ -199,10 +199,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (currentFees) {
       const totalAmount = currentAmount + currentFees.interest + currentFees.fee;
-      otherElement.innerText = `Celková částka: ${totalAmount} Kč`;
+      otherElement.innerText = `Celkem zaplatíte: ${totalAmount} Kč`;
     }
     const initialAmount = currentAmount;
-    firstElement.innerText = `První částka: ${initialAmount} Kč`;
+    firstElement.innerText = `Půjčka: ${initialAmount} Kč`;
   }
 
   // Přidání posluchače události na změny vstupního pole

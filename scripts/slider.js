@@ -105,6 +105,7 @@ class Slider {
     document.addEventListener("mouseup", (e) => {
       this._onDocumentMouseUp(e);
     });
+    
   }
 
   /**
